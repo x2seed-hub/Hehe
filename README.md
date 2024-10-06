@@ -2278,6 +2278,12 @@ spawn(function()
             pcall(function()
                 local QuestTitle = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text
                 if not string.find(QuestTitle, NameMon) then
+                if not string.find(QuestTitle, NameMon) then
+    StartMagnet = false
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
+    wait(0.6)
+    CheckQuest()
+end
                     StartMagnet = false
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
                 end
