@@ -10,7 +10,7 @@ end
 function CheckQuest() 
     MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
     if World1 then
-        if MyLevel == 1 or MyLevel <= 9 or SelectMonster == "" then -- Bandit
+        if MyLevel == 1 or MyLevel <= 9 or SelectMonster == "Bandit" then -- Bandit
             Mon = "Bandit"
             NameQuest = "BanditQuest1"
             LevelQuest = 1
@@ -1499,7 +1499,6 @@ while wait() do
                     if not v:FindFirstChild("MobEap") then
                         local BillboardGui = Instance.new("BillboardGui")
                         local TextLabel = Instance.new("TextLabel")
-
                         BillboardGui.Parent = v
                         BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
                         BillboardGui.Active = true
@@ -1508,7 +1507,6 @@ while wait() do
                         BillboardGui.LightInfluence = 1.000
                         BillboardGui.Size = UDim2.new(0, 200, 0, 50)
                         BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
-
                         TextLabel.Parent = BillboardGui
                         TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                         TextLabel.BackgroundTransparency = 1.000
@@ -1541,7 +1539,6 @@ while wait() do
                     if not v:FindFirstChild("Seaesps") then
                         local BillboardGui = Instance.new("BillboardGui")
                         local TextLabel = Instance.new("TextLabel")
-
                         BillboardGui.Parent = v
                         BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
                         BillboardGui.Active = true
@@ -1550,7 +1547,6 @@ while wait() do
                         BillboardGui.LightInfluence = 1.000
                         BillboardGui.Size = UDim2.new(0, 200, 0, 50)
                         BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
-
                         TextLabel.Parent = BillboardGui
                         TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                         TextLabel.BackgroundTransparency = 1.000
@@ -1583,7 +1579,6 @@ while wait() do
                     if not v:FindFirstChild("NpcEspes") then
                         local BillboardGui = Instance.new("BillboardGui")
                         local TextLabel = Instance.new("TextLabel")
-
                         BillboardGui.Parent = v
                         BillboardGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
                         BillboardGui.Active = true
@@ -1592,7 +1587,6 @@ while wait() do
                         BillboardGui.LightInfluence = 1.000
                         BillboardGui.Size = UDim2.new(0, 200, 0, 50)
                         BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
-
                         TextLabel.Parent = BillboardGui
                         TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                         TextLabel.BackgroundTransparency = 1.000
@@ -2638,7 +2632,6 @@ function GetCurrentBlade()
     while ret.Parent~=game.Players.LocalPlayer.Character do ret=ret.Parent end
     return ret
 end
-
                 spawn(function()
             while wait(.4) do
                 if getgenv().FastAttack then
@@ -2799,7 +2792,7 @@ _G.HeeBone = false
         end)
     end)
 ----ฟาร์มลัดเวล---
-_G.FastFarmMode = true
+_G.FastFarmMode = false
 spawn(function()
 		pcall(function()
 			while wait() do
