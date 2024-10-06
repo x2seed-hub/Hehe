@@ -2799,7 +2799,7 @@ _G.HeeBone = false
         end)
     end)
 ----ฟาร์มลัดเวล---
-_G.FastFarmMode = true
+_G.FastFarmMode = false
 spawn(function()
 		pcall(function()
 			while wait() do
